@@ -77,7 +77,7 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         }
     );
 }));
-Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false, dontAddCommandList: false}, (async (message, match) => {
     var filtreler = await FilterDb.getFilter(message.jid);
     if (!filtreler) return; 
     return filtreler.map(
